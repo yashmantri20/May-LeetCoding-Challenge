@@ -1,4 +1,4 @@
-/* An image is represented by a 2-D array of integers, each integer representing the pixel value of the image (from 0 to 65535).
+''' An image is represented by a 2-D array of integers, each integer representing the pixel value of the image (from 0 to 65535).
 
 Given a coordinate (sr, sc) representing the starting pixel (row and column) of the flood fill, and a pixel value newColor, "flood fill" the image.
 
@@ -15,7 +15,7 @@ Explanation:
 From the center of the image (with position (sr, sc) = (1, 1)), all pixels connected 
 by a path of the same color as the starting pixel are colored with the new color.
 Note the bottom corner is not colored 2, because it is not 4-directionally connected
-to the starting pixel. */
+to the starting pixel. '''
 
 class Solution:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
@@ -23,7 +23,7 @@ class Solution:
             return image
         
         r, c = len(image), len(image[0])
-        #color = image[sr][sc]
+
         def dfs(image,i, j,color,newColor):
             if i < 0 or i>=r or j < 0 or j >= c or image[i][j]!=color:
                 return
